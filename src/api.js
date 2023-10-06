@@ -8,9 +8,7 @@ const cors = require('cors');
 const router = express.Router()
 const app = express();
 require('dotenv').config();
-app.use(cors({
-    origin: '*',
-  }));
+app.use(cors())
 
 
 const port = 5000;
@@ -57,7 +55,11 @@ router.post('/translate', upload.single('file'), async (req, res) => {
 
 });
 
-
+router.get("/", (req, res) => {
+  res.json({
+    hello: "hi!"
+  });
+});
 app.use(`/.netlify/functions/api`, router);
 
 module.exports = app;
