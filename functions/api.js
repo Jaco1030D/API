@@ -44,7 +44,7 @@ router.post('/translate', upload.single('file'), async (req, res) => {
 
 
     res.setHeader('Content-Disposition', 'attachment; filename=seu_arquivo.pdf');
-    res.setHeader('Content-Type', 'application/octet-stream');
+    res.setHeader('Content-Type', 'application/pdf');
 
     res.end(response.documentTranslation.byteStreamOutputs[0])
 
