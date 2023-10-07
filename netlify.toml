@@ -4,7 +4,5 @@
   for = "/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
